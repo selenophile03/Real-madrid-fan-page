@@ -3,117 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Madrid - The Kingdom of Glory</title>
+    <title>Real Madrid CF - The Ultimate Fan Portal</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Premium Google Fonts -->
+    <!-- Premium Google Fonts for Royal aesthetic -->
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Animated Premium Header -->
+    <!-- Top Branding Bar mimicking Jersey texture lines -->
+    <div class="jersey-stripe"></div>
+
+    <!-- Main Navigation Bar -->
     <header>
-        <div class="logo">RM <span>👑</span></div>
+        <div class="logo-container">
+            <span class="crown">👑</span>
+            <div class="logo-text">REAL MADRID</div>
+        </div>
         <nav>
-            <a href="#home">The Throne</a>
-            <a href="#achievements">The Trophy Room</a>
-            <a href="#legacy">The Legacy</a>
+            <a href="#squad">The Squad</a>
+            <a href="#club-glory">Club Achievements</a>
+            <a href="#managers">The Masterminds</a>
+            <a href="#world-cup">World Stage</a>
         </nav>
     </header>
 
-    <!-- Cinematic Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg-overlay"></div>
+    <!-- Hero Portal Stage -->
+    <section class="hero-stage">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="badge">FIFA Club of the Century</span>
-            <h1>THE KINGDOM OF FOOTBALL</h1>
-            <p>Where legends are born, records are shattered, and white gold is forged.</p>
-            <div class="hero-stats">
-                <div class="stat-node"><strong>15+</strong> <span>UCL Titles</span></div>
-                <div class="stat-node"><strong>36+</strong> <span>La Liga</span></div>
-                <div class="stat-node"><strong>5</strong> <span>Club World Cups</span></div>
+            <span class="gold-badge">Official Fan Edition</span>
+            <h1>HALA MADRID Y NADA MÁS</h1>
+            <p>Welcome to the digital sanctuary of the greatest club in football history.</p>
+        </div>
+    
+
+    <!-- Section 1: The Squad Grid -->
+    <section id="squad" class="content-section">
+        <div class="section-title-wrap">
+            <h2>The Royal Galácticos</h2>
+            <p>The world-class superstars wearing the historic pristine white kit.</p>
+        </div>
+        <div class="display-grid">
+            <div class="player-card">
+                <div class="jersey-number">7</div>
+                <h3>Vinícius Júnior</h3>
+                <span class="position">Forward</span>
+            </div>
+            <div class="player-card">
+                <div class="jersey-number">5</div>
+                <h3>Jude Bellingham</h3>
+                <span class="position">Midfielder</span>
+            </div>
+            <div class="player-card">
+                <div class="jersey-number">9</div>
+                <h3>Kylian Mbappé</h3>
+                <span class="position">Forward</span>
+            </div>
+            <div class="player-card">
+                <div class="jersey-number">1</div>
+                <h3>Thibaut Courtois</h3>
+                <span class="position">Goalkeeper</span>
             </div>
         </div>
     
 
-    <!-- Creative Achievement Showcase -->
-    <section id="achievements" class="achievements-section">
-        <div class="section-header">
-            <h2>The Trophy Room</h2>
-            <p>A century of absolute global dominance written in gold.</p>
+    <!-- Section 2: Club Achievements Dashboard -->
+    <section id="club-glory" class="content-section dark-bg">
+        <div class="section-title-wrap">
+            <h2 class="gold-text">The Silverware Kingdom</h2>
+            <p>An unmatched cabinet of relentless club excellence.</p>
         </div>
+        <div class="display-grid">
+            <div class="trophy-box">
+                <div class="icon">🏆</div>
+                <h3>15+ Champions Leagues</h3>
+                <p>The ultimate undisputed kings of European football.</p>
+            </div>
+            <div class="trophy-box">
+                <div class="icon">🛡️</div>
+                <h3>36+ La Liga Titles</h3>
+                <p>Consistent absolute dominance over Spanish football history.</p>
+            </div>
+            <div class="trophy-box">
+                <div class="icon">👑</div>
+                <h3>20x Copa del Rey</h3>
+                <p>Historical triumphs in Spain's prestigious knockout tournament.</p>
+            </div>
+            <div class="trophy-box">
+                <div class="icon">🌍</div>
+                <h3>5x Club World Cups</h3>
+                <p>Proving global superiority on the ultimate planetary stage.</p>
+            </div>
+        </div>
+    
 
-        <div class="grid-layout">
-            <!-- Achievement 1 -->
-            <div class="trophy-card glass">
-                <div class="glow-effect"></div>
-                <div class="trophy-icon">🏆</div>
-                <div class="card-info">
-                    <span class="tag">European Royalty</span>
-                    <h3>The Decimocuarta & Beyond</h3>
-                    <p>No club comes close. Real Madrid commands the UEFA Champions League, turning Europe's greatest stage into their personal playground.</p>
+    <!-- Section 3: Iconic Managers Timeline -->
+    <section id="managers" class="content-section">
+        <div class="section-title-wrap">
+            <h2>The Legendary Tacticians</h2>
+            <p>The elite minds who orchestrated tactical dynasties from the dugout.</p>
+        </div>
+        <div class="manager-timeline">
+            <div class="timeline-row">
+                <div class="time-tag">Modern Era</div>
+                <div class="manager-details">
+                    <h3>Carlo Ancelotti</h3>
+                    <p>The calm mastermind of football. Architect of multiple Champions League crowns and tactical flexibility.</p>
                 </div>
             </div>
-
-            <!-- Achievement 2 -->
-            <div class="trophy-card glass">
-                <div class="glow-effect"></div>
-                <div class="trophy-icon">🛡️</div>
-                <div class="card-info">
-                    <span class="tag">Domestic Power</span>
-                    <h3>Spanish Kings</h3>
-                    <p>Dominating La Liga across eras with historical points tallies and an unmatched standard of winning culture in Spain.</p>
+            <div class="timeline-row">
+                <div class="time-tag">The Three-Peat</div>
+                <div class="manager-details">
+                    <h3>Zinedine Zidane</h3>
+                    <p>Turned European dominance into an absolute art form with three consecutive UCL crowns.</p>
                 </div>
             </div>
-
-            <!-- Achievement 3 -->
-            <div class="trophy-card glass">
-                <div class="glow-effect"></div>
-                <div class="trophy-icon">✨</div>
-                <div class="card-info">
-                    <span class="tag">Individual Brilliance</span>
-                    <h3>The Ballon d'Or Hub</h3>
-                    <p>From Di Stéfano and Cristiano Ronaldo to modern stars, the world's finest players wear the white shirt to claim individual immortality.</p>
-                </div>
-            </div>
-
-            <!-- Achievement 4 -->
-            <div class="trophy-card glass">
-                <div class="glow-effect"></div>
-                <div class="trophy-icon">🌍</div>
-                <div class="card-info">
-                    <span class="tag">Global Impact</span>
-                    <h3>The Century's Best</h3>
-                    <p>Officially designated by FIFA as the Greatest Club of the 20th Century. A global brand and benchmark for every sports institution.</p>
+            <div class="timeline-row">
+                <div class="time-tag">The Identity</div>
+                <div class="manager-details">
+                    <h3>José Mourinho</h3>
+                    <p>Broke domestic records with the famous 100-point "Counter-Attacking" La Liga season.</p>
                 </div>
             </div>
         </div>
     
 
-    <!-- Legacy Timeline Section -->
-    <section id="legacy" class="legacy-section">
-        <div class="section-header">
-            <h2>Golden Eras</h2>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item glass">
-                <h4>1950s • The Genesis</h4>
-                <p>Di Stéfano, Puskás, and 5 consecutive European Cups establishing the myth of Real Madrid.</p>
+    <!-- Section 4: World Cup Legacy Section -->
+    <section id="world-cup" class="content-section world-stage-bg">
+        <div class="hero-overlay"></div>
+        <div class="world-content">
+            <div class="section-title-wrap">
+                <h2 class="gold-text">Madridistas on the World Stage</h2>
+                <p>How Real Madrid icons defined international FIFA World Cup history.</p>
             </div>
-            <div class="timeline-item glass">
-                <h4>2000s • The Galácticos</h4>
-                <p>Zidane, Figo, Ronaldo, and Beckham blending elite world-class football with global showmanship.</p>
-            </div>
-            <div class="timeline-item glass">
-                <h4>2010s • The Three-Peat</h4>
-                <p>Cristiano Ronaldo leads an unstoppable squad to achieve an unprecedented modern 3 consecutive Champions League titles.</p>
+            <div class="display-grid">
+                <div class="world-card">
+                    <h3>The Ballon d'Or Crux</h3>
+                    <p>Players like Ronaldo Nazário, Zinedine Zidane, and Fabio Cannavaro dominated World Cups while tied deeply to the white shirt legacy.</p>
+                </div>
+                <div class="world-card">
+                    <h3>Modern Dominance</h3>
+                    <p>From core champions like Luka Modrić leading nations to finals, to icons cementing legends globally as ultimate tournament MVPs.</p>
+                </div>
             </div>
         </div>
     
 
-    <!-- Elegant Footer -->
+    <!-- Official Madridista Footer -->
     <footer>
-        <p>Hala Madrid y Nada Más • Built for the Madridistas</p>
+        <p>¡Hala Madrid y nada más! • Unofficial Premium Fan Project © 2026</p>
     </footer>
 
 </body>
 </html>
+                
