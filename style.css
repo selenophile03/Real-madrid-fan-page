@@ -1,4 +1,15 @@
-/* Reset and Base Styles */
+/* Custom Variable Token System */
+:root {
+    --bg-dark: #070a13;
+    --card-glass: rgba(255, 255, 255, 0.03);
+    --border-glass: rgba(255, 255, 255, 0.07);
+    --gold: #dfb257;
+    --gold-glow: rgba(223, 178, 87, 0.3);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+}
+
+/* Global Modern Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,163 +17,291 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0f172a; /* Deep modern dark blue */
-    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Header & Nav */
+/* Glassmorphism Reusable Style */
+.glass {
+    background: var(--card-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+}
+
+/* Luxury Navigation */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background-color: #1e293b;
-    border-bottom: 3px solid #cca353; /* Premium Gold Accent */
-    position: sticky;
+    padding: 25px 8%;
+    position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    background: rgba(7, 10, 19, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-glass);
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
     font-weight: 800;
-    color: #cca353;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--text-main);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 1.4rem;
 }
 
 nav a {
-    color: #ffffff;
+    color: var(--text-muted);
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 30px;
     font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #cca353;
+    color: var(--gold);
 }
 
-/* Hero Section */
+/* Cinematic Hero Section */
 .hero {
     position: relative;
-    height: 80vh;
-    /* Uses a premium dark abstract background pattern */
+    height: 100vh;
     background: url('https://unsplash.com') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 20px;
 }
 
-.hero-overlay {
+.hero-bg-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(15, 23, 42, 0.75); /* Darkens the image for text clarity */
+    background: linear-gradient(to bottom, rgba(7,10,19,0.4), var(--bg-dark));
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
-    max-width: 800px;
-    padding: 20px;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(223, 178, 87, 0.15);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
     font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    letter-spacing: 4px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-content p {
+    color: var(--text-muted);
     font-size: 1.2rem;
-    color: #cbd5e1;
-    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #cca353;
-    color: #0f172a;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 30px;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+/* Dashboard Style Stats Grid */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-    background-color: #e5b85c;
+.stat-node {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-glass);
+    padding: 20px 40px;
+    border-radius: 16px;
+    min-width: 180px;
+    backdrop-filter: blur(10px);
 }
 
-/* Info Cards Section */
-.info-section {
-    padding: 60px 8%;
-    text-align: center;
-}
-
-.info-section h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-}
-
-.info-section h2::after {
-    content: '';
+.stat-node strong {
     display: block;
-    width: 50%;
-    height: 3px;
-    background-color: #cca353;
-    margin: 10px auto 0 auto;
+    font-size: 2.5rem;
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    margin-bottom: 5px;
 }
 
-.card-container {
+.stat-node span {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* Sections Layout */
+.achievements-section, .legacy-section {
+    padding: 100px 8%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Grid Dashboard Framework */
+.grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
-.card {
-    background-color: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid rgba(204, 163, 83, 0.2);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+.trophy-card {
+    position: relative;
+    padding: 40px;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #cca353;
+/* Hover Glowing Interactivity */
+.trophy-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px var(--gold-glow);
 }
 
-.card h3 {
-    color: #cca353;
-    font-size: 1.3rem;
+.glow-effect {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(223,178,87,0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.trophy-icon {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.trophy-card h3 {
+    font-size: 1.4rem;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
-.card p {
-    color: #94a3b8;
+.trophy-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Clean Minimal Timeline Layout */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    padding: 30px;
+    border-radius: 16px;
+    border-left: 4px solid var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.timeline-item h4 {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timeline-item p {
+    color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
-/* Footer */
+/* Elegant Premium Footer */
 footer {
     text-align: center;
-    padding: 30px;
-    background-color: #0f172a;
-    border-top: 1px solid #1e293b;
-    color: #64748b;
-    font-size: 0.9rem;
+    padding: 50px 20px;
+    border-top: 1px solid var(--border-glass);
+    background: #04060c;
 }
+
+footer p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Responsive Scaling Support */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    header { padding: 20px 5%; }
+    nav { display: none; } /* Kept clean for single-page viewports */
+}
+
