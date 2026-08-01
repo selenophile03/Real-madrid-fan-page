@@ -1,15 +1,16 @@
-/* Custom Variable Token System */
+/* Real Madrid Corporate & Kit Design Token System */
 :root {
-    --bg-dark: #070a13;
-    --card-glass: rgba(255, 255, 255, 0.03);
-    --border-glass: rgba(255, 255, 255, 0.07);
-    --gold: #dfb257;
-    --gold-glow: rgba(223, 178, 87, 0.3);
-    --text-main: #f1f5f9;
-    --text-muted: #94a3b8;
+    --madrid-white: #ffffff;
+    --madrid-navy: #09142e;
+    --madrid-gold: #cca353;
+    --madrid-gold-bright: #e5b85c;
+    --kit-grey: #f4f6f9;
+    --glass-white: rgba(255, 255, 255, 0.95);
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Global Modern Reset */
+/* Global Reset & Base Layout */
 * {
     margin: 0;
     padding: 0;
@@ -17,291 +18,363 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-main);
+    font-family: var(--font-body);
+    background-color: var(--kit-grey);
+    color: var(--madrid-navy);
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
-/* Glassmorphism Reusable Style */
-.glass {
-    background: var(--card-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border-glass);
+/* Accent lines mimicking kit stitching details */
+.jersey-stripe {
+    height: 6px;
+    background: linear-gradient(to right, var(--madrid-navy), var(--madrid-gold), var(--madrid-navy));
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
 }
 
-/* Luxury Navigation */
+/* Navigation System based on Official Club Suites */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
+    padding: 20px 8%;
+    background: var(--madrid-white);
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 6px;
     z-index: 1000;
-    background: rgba(7, 10, 19, 0.8);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border-glass);
+    box-shadow: 0 4px 20px rgba(9, 20, 46, 0.08);
+    border-bottom: 1px solid rgba(204, 163, 83, 0.2);
 }
 
-.logo {
-    font-family: 'Cinzel', serif;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container .crown {
     font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--text-main);
-    letter-spacing: 2px;
 }
 
-.logo span {
+.logo-text {
+    font-family: var(--font-heading);
+    font-weight: 900;
     font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: var(--madrid-navy);
 }
 
 nav a {
-    color: var(--text-muted);
+    color: var(--madrid-navy);
     text-decoration: none;
-    margin-left: 30px;
-    font-weight: 700;
+    margin-left: 25px;
+    font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--gold);
+    color: var(--madrid-gold);
 }
 
-/* Cinematic Hero Section */
-.hero {
+/* Immersive Hero Header Window */
+.hero-stage {
     position: relative;
-    height: 100vh;
+    height: 75vh;
     background: url('https://unsplash.com') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 20px;
+    padding-top: 80px;
 }
 
-.hero-bg-overlay {
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(7,10,19,0.4), var(--bg-dark));
+    background: linear-gradient(135deg, rgba(9, 20, 46, 0.85), rgba(9, 20, 46, 0.6));
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    max-width: 900px;
+    z-index: 5;
+    color: var(--madrid-white);
+    max-width: 800px;
+    padding: 0 20px;
 }
 
-.badge {
+.gold-badge {
     display: inline-block;
-    padding: 6px 16px;
-    background: rgba(223, 178, 87, 0.15);
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    padding: 6px 14px;
+    border: 1px solid var(--madrid-gold);
+    color: var(--madrid-gold);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 .hero-content h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: 4px;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #ffffff, #cbd5e1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 
 .hero-content p {
-    color: var(--text-muted);
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 50px auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-/* Dashboard Style Stats Grid */
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.stat-node {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-glass);
-    padding: 20px 40px;
-    border-radius: 16px;
-    min-width: 180px;
-    backdrop-filter: blur(10px);
-}
-
-.stat-node strong {
-    display: block;
-    font-size: 2.5rem;
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    margin-bottom: 5px;
-}
-
-.stat-node span {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    letter-spacing: 1px;
-}
-
-/* Sections Layout */
-.achievements-section, .legacy-section {
+/* Structural Components for Sections */
+.content-section {
     padding: 100px 8%;
+    background-color: var(--madrid-white);
 }
 
-.section-header {
+.dark-bg {
+    background-color: var(--madrid-navy);
+    color: var(--madrid-white);
+}
+
+.section-title-wrap {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.section-header h2 {
-    font-family: 'Cinzel', serif;
+.section-title-wrap h2 {
+    font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-}
-
-.section-header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-}
-
-/* Grid Dashboard Framework */
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.trophy-card {
-    position: relative;
-    padding: 40px;
-    border-radius: 24px;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Hover Glowing Interactivity */
-.trophy-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--gold);
-    box-shadow: 0 20px 40px var(--gold-glow);
-}
-
-.glow-effect {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(223,178,87,0.08) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.trophy-icon {
-    font-size: 3rem;
-    margin-bottom: 25px;
-}
-
-.tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 1.5px;
+    color: var(--madrid-navy);
     margin-bottom: 10px;
 }
 
-.trophy-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+.dark-bg .section-title-wrap h2 {
+    color: var(--madrid-white);
+}
+
+.gold-text {
+    color: var(--madrid-gold) !important;
+}
+
+.section-title-wrap p {
+    color: #64748b;
+    font-size: 1.05rem;
+}
+
+.dark-bg .section-title-wrap p {
+    color: #94a3b8;
+}
+
+/* Reusable Grid Engine */
+.display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Component cards: Pristine White Jersey Style */
+.player-card {
+    background: var(--madrid-white);
+    border: 1px solid rgba(9, 20, 46, 0.06);
+    padding: 40px 30px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(9, 20, 46, 0.04);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--madrid-gold);
+}
+
+.player-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: var(--madrid-gold);
+}
+
+.jersey-number {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: rgba(9, 20, 46, 0.06);
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.player-card h3 {
+    font-size: 1.3rem;
+    color: var(--madrid-navy);
+    margin-bottom: 5px;
+}
+
+.position {
+    display: inline-block;
+    font-size: 0.8rem;
     font-weight: 700;
-}
-
-.trophy-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.7;
-}
-
-/* Clean Minimal Timeline Layout */
-.timeline {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.timeline-item {
-    padding: 30px;
-    border-radius: 16px;
-    border-left: 4px solid var(--gold);
-    transition: transform 0.3s ease;
-}
-
-.timeline-item:hover {
-    transform: translateX(10px);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.timeline-item h4 {
-    color: var(--gold);
-    font-size: 1.1rem;
-    margin-bottom: 8px;
     text-transform: uppercase;
+    color: var(--madrid-gold);
     letter-spacing: 1px;
 }
 
-.timeline-item p {
-    color: var(--text-muted);
+/* Trophy Cabinet Display */
+.trophy-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.trophy-box:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--madrid-gold);
+}
+
+.trophy-box .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.trophy-box h3 {
+    font-family: var(--font-heading);
+    color: var(--madrid-gold);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.trophy-box p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* Managers Modern Timeline Architecture */
+.manager-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.timeline-row {
+    display: flex;
+    gap: 30px;
+    background: var(--kit-grey);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid var(--madrid-navy);
+    align-items: center;
+}
+
+.timeline-row:hover {
+    border-left-color: var(--madrid-gold);
+}
+
+.time-tag {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--madrid-gold);
+    letter-spacing: 1px;
+    min-width: 140px;
+}
+
+.manager-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--madrid-navy);
+}
+
+.manager-details p {
+    color: #475569;
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
-/* Elegant Premium Footer */
+/* World Cup Stage Design Context */
+.world-stage-bg {
+    position: relative;
+    background: url('https://unsplash.com') no-repeat center center/cover;
+    color: var(--madrid-white);
+}
+
+.world-content {
+    position: relative;
+    z-index: 5;
+}
+
+.world-card {
+    background: rgba(9, 20, 46, 0.85);
+    border: 1px solid rgba(204, 163, 83, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.world-card h3 {
+    color: var(--madrid-gold);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.world-card p {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Corporate Premium Footer */
 footer {
+    background-color: var(--madrid-navy);
+    color: rgba(255, 255, 255, 0.6);
     text-align: center;
-    padding: 50px 20px;
-    border-top: 1px solid var(--border-glass);
-    background: #04060c;
-}
-
-footer p {
-    color: var(--text-muted);
+    padding: 40px 20px;
     font-size: 0.85rem;
-    letter-spacing: 1px;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(204, 163, 83, 0.2);
 }
 
-/* Responsive Scaling Support */
-@media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.5rem; }
-    header { padding: 20px 5%; }
-    nav { display: none; } /* Kept clean for single-page viewports */
+/* Responsive Adaptive Fluidity */
+@media(max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+    nav {
+        display: none; /* Keeps viewports streamlined on smaller form factors */
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .timeline-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .content-section {
+        padding: 60px 5%;
+    }
 }
-
