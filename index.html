@@ -3,157 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Madrid CF - The Ultimate Fan Portal</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Premium Google Fonts for Royal aesthetic -->
-    <link href="https://googleapis.com" rel="stylesheet">
+    <title>Madridista Central | Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Real Madrid <span>Fan Central</span></h1>
+            <p>Explore the legacy, trophies, and engineering of the greatest club in football history.</p>
+        </header>
 
-    <!-- Top Branding Bar mimicking Jersey texture lines -->
-    <div class="jersey-stripe"></div>
-
-    <!-- Main Navigation Bar -->
-    <header>
-        <div class="logo-container">
-            <span class="crown">👑</span>
-            <div class="logo-text">REAL MADRID</div>
-        </div>
-        <nav>
-            <a href="#squad">The Squad</a>
-            <a href="#club-glory">Club Achievements</a>
-            <a href="#managers">The Masterminds</a>
-            <a href="#world-cup">World Stage</a>
-        </nav>
-    </header>
-
-    <!-- Hero Portal Stage -->
-    <section class="hero-stage">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="gold-badge">Official Fan Edition</span>
-            <h1>HALA MADRID Y NADA MÁS</h1>
-            <p>Welcome to the digital sanctuary of the greatest club in football history.</p>
-        </div>
-    
-
-    <!-- Section 1: The Squad Grid -->
-    <section id="squad" class="content-section">
-        <div class="section-title-wrap">
-            <h2>The Royal Galácticos</h2>
-            <p>The world-class superstars wearing the historic pristine white kit.</p>
-        </div>
-        <div class="display-grid">
-            <div class="player-card">
-                <div class="jersey-number">7</div>
-                <h3>Vinícius Júnior</h3>
-                <span class="position">Forward</span>
-            </div>
-            <div class="player-card">
-                <div class="jersey-number">5</div>
-                <h3>Jude Bellingham</h3>
-                <span class="position">Midfielder</span>
-            </div>
-            <div class="player-card">
-                <div class="jersey-number">9</div>
-                <h3>Kylian Mbappé</h3>
-                <span class="position">Forward</span>
-            </div>
-            <div class="player-card">
-                <div class="jersey-number">1</div>
-                <h3>Thibaut Courtois</h3>
-                <span class="position">Goalkeeper</span>
-            </div>
-        </div>
-    
-
-    <!-- Section 2: Club Achievements Dashboard -->
-    <section id="club-glory" class="content-section dark-bg">
-        <div class="section-title-wrap">
-            <h2 class="gold-text">The Silverware Kingdom</h2>
-            <p>An unmatched cabinet of relentless club excellence.</p>
-        </div>
-        <div class="display-grid">
-            <div class="trophy-box">
-                <div class="icon">🏆</div>
-                <h3>15+ Champions Leagues</h3>
-                <p>The ultimate undisputed kings of European football.</p>
-            </div>
-            <div class="trophy-box">
-                <div class="icon">🛡️</div>
-                <h3>36+ La Liga Titles</h3>
-                <p>Consistent absolute dominance over Spanish football history.</p>
-            </div>
-            <div class="trophy-box">
-                <div class="icon">👑</div>
-                <h3>20x Copa del Rey</h3>
-                <p>Historical triumphs in Spain's prestigious knockout tournament.</p>
-            </div>
-            <div class="trophy-box">
-                <div class="icon">🌍</div>
-                <h3>5x Club World Cups</h3>
-                <p>Proving global superiority on the ultimate planetary stage.</p>
-            </div>
-        </div>
-    
-
-    <!-- Section 3: Iconic Managers Timeline -->
-    <section id="managers" class="content-section">
-        <div class="section-title-wrap">
-            <h2>The Legendary Tacticians</h2>
-            <p>The elite minds who orchestrated tactical dynasties from the dugout.</p>
-        </div>
-        <div class="manager-timeline">
-            <div class="timeline-row">
-                <div class="time-tag">Modern Era</div>
-                <div class="manager-details">
-                    <h3>Carlo Ancelotti</h3>
-                    <p>The calm mastermind of football. Architect of multiple Champions League crowns and tactical flexibility.</p>
+        <!-- Direct Navigation Dashboard Interface Structure -->
+        <main class="dashboard-grid">
+            
+            <!-- Link Redirect Block 1: Domestic Stats -->
+            <a href="domestic.html" class="dash-card">
+                <div>
+                    <div class="icon">🏆</div>
+                    <h2>Club Titles</h2>
+                    <p>Track domestic dominance across La Liga, Copa del Rey, and Supercopa historic tallies.</p>
                 </div>
-            </div>
-            <div class="timeline-row">
-                <div class="time-tag">The Three-Peat</div>
-                <div class="manager-details">
-                    <h3>Zinedine Zidane</h3>
-                    <p>Turned European dominance into an absolute art form with three consecutive UCL crowns.</p>
-                </div>
-            </div>
-            <div class="timeline-row">
-                <div class="time-tag">The Identity</div>
-                <div class="manager-details">
-                    <h3>José Mourinho</h3>
-                    <p>Broke domestic records with the famous 100-point "Counter-Attacking" La Liga season.</p>
-                </div>
-            </div>
-        </div>
-    
+                <button class="action-btn">View Domestic</button>
+            </a>
 
-    <!-- Section 4: World Cup Legacy Section -->
-    <section id="world-cup" class="content-section world-stage-bg">
-        <div class="hero-overlay"></div>
-        <div class="world-content">
-            <div class="section-title-wrap">
-                <h2 class="gold-text">Madridistas on the World Stage</h2>
-                <p>How Real Madrid icons defined international FIFA World Cup history.</p>
-            </div>
-            <div class="display-grid">
-                <div class="world-card">
-                    <h3>The Ballon d'Or Crux</h3>
-                    <p>Players like Ronaldo Nazário, Zinedine Zidane, and Fabio Cannavaro dominated World Cups while tied deeply to the white shirt legacy.</p>
+            <!-- Link Redirect Block 2: International Records -->
+            <a href="international.html" class="dash-card">
+                <div>
+                    <div class="icon">🌍</div>
+                    <h2>International Achievements</h2>
+                    <p>Dive deep into our peerless European landscape including Champions League records.</p>
                 </div>
-                <div class="world-card">
-                    <h3>Modern Dominance</h3>
-                    <p>From core champions like Luka Modrić leading nations to finals, to icons cementing legends globally as ultimate tournament MVPs.</p>
+                <button class="action-btn">View Global</button>
+            </a>
+
+            <!-- Link Redirect Block 3: Manager Legend Profiles -->
+            <a href="managers.html" class="dash-card">
+                <div>
+                    <div class="icon">📋</div>
+                    <h2>Successful Managers</h2>
+                    <p>Review tactical mastermind profiles from Miguel Muñoz to Carlo Ancelotti.</p>
                 </div>
-            </div>
-        </div>
-    
+                <button class="action-btn">View Masterminds</button>
+            </a>
 
-    <!-- Official Madridista Footer -->
-    <footer>
-        <p>¡Hala Madrid y nada más! • Unofficial Premium Fan Project © 2026</p>
-    </footer>
-
+        </main>
+    </div>
 </body>
 </html>
-                
+
