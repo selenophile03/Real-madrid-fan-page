@@ -3,51 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madridista Central | Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Hala Madrid | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Real Madrid <span>Fan Central</span></h1>
-            <p>Explore the legacy, trophies, and engineering of the greatest club in football history.</p>
-        </header>
 
-        <!-- Direct Navigation Dashboard Interface Structure -->
-        <main class="dashboard-grid">
-            
-            <!-- Link Redirect Block 1: Domestic Stats -->
-            <a href="domestic.html" class="dash-card">
+    <header>
+        <div class="logo-section">
+            <h1>REAL <span>MADRID</span></h1>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="titles.html">Achievements</a>
+            <a href="managers.html">Managers</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h2>Madridista Command Center</h2>
+            <p>HALA MADRID Y NADA MÁS</p>
+        
+
+        <section class="dashboard-grid">
+            <!-- Redirects to Achievements Page -->
+            <a href="titles.html" class="dash-card">
                 <div>
-                    <div class="icon">🏆</div>
-                    <h2>Club Titles</h2>
-                    <p>Track domestic dominance across La Liga, Copa del Rey, and Supercopa historic tallies.</p>
+                    <div class="card-icon">🏆</div>
+                    <h3>Club Titles & Achievements</h3>
+                    <p>Track domestic superiority in La Liga and historical Spanish knockout tournaments collected over a century of excellence.</p>
                 </div>
-                <button class="action-btn">View Domestic</button>
+                <div><span class="btn-explore">View Titles</span></div>
             </a>
 
-            <!-- Link Redirect Block 2: International Records -->
-            <a href="international.html" class="dash-card">
+            <!-- Redirects to Achievements Page (Targeted section via structural styling) -->
+            <a href="titles.html#international" class="dash-card">
                 <div>
-                    <div class="icon">🌍</div>
-                    <h2>International Achievements</h2>
-                    <p>Dive deep into our peerless European landscape including Champions League records.</p>
+                    <div class="card-icon">🌍</div>
+                    <h3>International Trophies</h3>
+                    <p>Explore absolute global dominance, including the historic haul of UEFA Champions League and FIFA Club World Cup titles.</p>
                 </div>
-                <button class="action-btn">View Global</button>
+                <div><span class="btn-explore">View Trophies</span></div>
             </a>
 
-            <!-- Link Redirect Block 3: Manager Legend Profiles -->
+            <!-- Redirects to Managers Page -->
             <a href="managers.html" class="dash-card">
                 <div>
-                    <div class="icon">📋</div>
-                    <h2>Successful Managers</h2>
-                    <p>Review tactical mastermind profiles from Miguel Muñoz to Carlo Ancelotti.</p>
+                    <div class="card-icon">👔</div>
+                    <h3>Successful Managers</h3>
+                    <p>Review the masterminds behind the dynasties, from Miguel Muñoz to the modern tactical triumphs of Carlo Ancelotti.</p>
                 </div>
-                <button class="action-btn">View Masterminds</button>
+                <div><span class="btn-explore">View Managers</span></div>
             </a>
+        
+    </main>
 
-        </main>
-    </div>
+    <footer>
+        <p>&copy; 2026 Real Madrid Fan Portal. Built for Madridistas Worldwide.</p>
+    </footer>
+
 </body>
 </html>
 
