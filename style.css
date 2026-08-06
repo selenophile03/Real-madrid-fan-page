@@ -1,212 +1,38 @@
-/* Base Theme Configurations */
-:root {
-    --rm-white: #FFFFFF;
-    --rm-blue: #003366;
-    --rm-gold: #FEBE10;
-    --rm-dark: #111111;
-    --rm-gray: #1E1E1E;
-    --card-bg: rgba(30, 30, 30, 0.75);
+/* Core Layout & Adaptive Dynamic Background System */
+.bg-madrid {
+    background-image: 
+        linear-gradient(to right, rgba(10, 23, 46, 0.94), rgba(15, 32, 67, 0.88)), 
+        url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Glassmorphism Navigation Structure */
+.glass-nav {
+    background: rgba(10, 25, 50, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
-body {
-    background: radial-gradient(circle at center, #001f4d 0%, #050b14 100%);
-    color: var(--rm-white);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+/* Frosted Glass Layout Content Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
-/* Glassmorphism Navigation Bar */
-header {
-    background: rgba(0, 51, 102, 0.6);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--rm-gold);
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Subtle Interactive Hover Transitions */
+.glass-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(234, 179, 8, 0.3);
 }
 
-.logo-section h1 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--rm-white);
-    letter-spacing: 1px;
-}
-
-.logo-section span {
-    color: var(--rm-gold);
-}
-
-nav a {
-    color: var(--rm-white);
-    text-decoration: none;
-    margin-left: 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover, nav a.active {
-    color: var(--rm-gold);
-}
-
-/* Main Layout Wrapper */
-main {
-    flex: 1;
-    padding: 3rem 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.hero-section {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.hero-section h2 {
-    font-size: 3rem;
-    color: var(--rm-white);
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-}
-
-.hero-section p {
-    color: var(--rm-gold);
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-
-/* Dashboard Grid Component */
-.dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-/* Premium Navigation & Content Cards */
-.dash-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(254, 190, 16, 0.2);
-    border-radius: 15px;
-    padding: 2.5rem;
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--rm-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.dash-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--rm-gold);
-    box-shadow: 0 15px 30px rgba(254, 190, 16, 0.15);
-    background: rgba(0, 51, 102, 0.4);
-}
-
-.card-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.dash-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    color: var(--rm-white);
-    border-bottom: 2px solid rgba(255,255,255,0.1);
-    padding-bottom: 0.5rem;
-}
-
-.dash-card p {
-    color: #cccccc;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.btn-explore {
-    display: inline-block;
-    background: transparent;
-    border: 2px solid var(--rm-gold);
-    color: var(--rm-gold);
-    padding: 0.6rem 1.5rem;
-    border-radius: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-}
-
-.dash-card:hover .btn-explore {
-    background: var(--rm-gold);
-    color: var(--rm-dark);
-}
-
-/* Data Tables Styling */
-.data-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(254, 190, 16, 0.2);
-    margin-top: 1rem;
-}
-
-.data-table th {
-    background-color: var(--rm-blue);
-    color: var(--rm-gold);
-    text-align: left;
-    padding: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-.data-table td {
-    padding: 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    color: #e0e0e0;
-}
-
-.data-table tr:last-child td {
-    border-bottom: none;
-}
-
-.data-table tr:hover {
-    background: rgba(254, 190, 16, 0.05);
-}
-
-.highlight-gold {
-    color: var(--rm-gold);
-    font-weight: bold;
-}
-
-/* Footer Section */
-footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid rgba(254, 190, 16, 0.1);
-    background: rgba(5, 11, 20, 0.8);
-    font-size: 0.85rem;
-    color: #888888;
-    margin-top: auto;
+/* Smooth Scrolling Anchor Matrix */
+html {
+    scroll-behavior: smooth;
 }
 
