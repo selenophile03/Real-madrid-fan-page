@@ -3,65 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hala Madrid | Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hala Madrid! - Ultimate Fan Hub</title>
+    <!-- Tailwind CSS for Layout Architecture -->
+    <script src="https://jsdelivr.net"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Dashboard Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
-<body>
+<body class="bg-madrid min-h-screen text-slate-100 font-sans antialiased flex flex-col justify-between">
 
-    <header>
-        <div class="logo-section">
-            <h1>REAL <span>MADRID</span></h1>
+    <!-- Top Navigation Bar -->
+    <nav class="glass-nav sticky top-0 z-50 px-6 py-4 flex items-center justify-between border-b border-white/10">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+                <i class="fa-solid fa-crown text-yellow-400 text-xl"></i>
+            </div>
+            <span class="font-bold text-lg tracking-wider text-white">REAL MADRID C.F. FAN HUB</span>
         </div>
-        <nav>
-            <a href="index.html" class="active">Dashboard</a>
-            <a href="titles.html">Achievements</a>
-            <a href="managers.html">Managers</a>
-        </nav>
-    </header>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+            <a href="#trophies" class="hover:text-yellow-400 transition-colors">Trophies</a>
+            <a href="#achievements" class="hover:text-yellow-400 transition-colors">Achievements</a>
+            <a href="#managers" class="hover:text-yellow-400 transition-colors">Legendary Managers</a>
+        </div>
+        <div class="text-xs bg-white/10 px-3 py-1.5 rounded-full border border-white/10 text-slate-300">
+            User Session: Madridista_2026
+        </div>
+    </nav>
 
-    <main>
-        <section class="hero-section">
-            <h2>Madridista Command Center</h2>
-            <p>HALA MADRID Y NADA MÁS</p>
+    <!-- Main Dashboard Body -->
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full space-y-8 flex-grow">
         
+        <!-- Hero Welcome Banner -->
+        <section class="glass-card p-8 text-center md:text-left md:flex items-center justify-between border border-white/10 rounded-2xl relative overflow-hidden">
+            <div class="space-y-3 z-10 relative">
+                <span class="text-xs font-bold tracking-widest uppercase text-yellow-400 bg-yellow-400/10 px-3 py-1 rounded-full">Official Fan Repository</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">HALA MADRID!</h1>
+                <p class="text-slate-300 max-w-xl text-sm leading-relaxed">The ultimate diagnostic statistics panel tracking historical European dominance, elite management cycles, and absolute domestic triumphs.</p>
+            </div>
+            <div class="mt-6 md:mt-0 flex space-x-3 justify-center">
+                <a href="#trophies" class="bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold px-5 py-2.5 rounded-lg text-sm transition-all shadow-lg shadow-yellow-500/20">Explore History</a>
+            </div>
+        </section>
 
-        <section class="dashboard-grid">
-            <!-- Redirects to Achievements Page -->
-            <a href="titles.html" class="dash-card">
-                <div>
-                    <div class="card-icon">🏆</div>
-                    <h3>Club Titles & Achievements</h3>
-                    <p>Track domestic superiority in La Liga and historical Spanish knockout tournaments collected over a century of excellence.</p>
+        <!-- Metric Grid Block: International Trophies -->
+        <section id="trophies" class="space-y-4">
+            <h2 class="text-xl font-bold tracking-wider text-white uppercase border-l-4 border-yellow-400 pl-3">International Trophies Panel</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- UCL Card -->
+                <div class="glass-card p-6 border border-white/10 rounded-xl flex items-center space-x-4">
+                    <div class="p-4 bg-blue-500/10 text-blue-400 rounded-lg border border-blue-500/20"><i class="fa-solid fa-trophy text-2xl"></i></div>
+                    <div>
+                        <div class="text-2xl font-black text-white">15</div>
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">UEFA Champions League</div>
+                    </div>
                 </div>
-                <div><span class="btn-explore">View Titles</span></div>
-            </a>
 
-            <!-- Redirects to Achievements Page (Targeted section via structural styling) -->
-            <a href="titles.html#international" class="dash-card">
-                <div>
-                    <div class="card-icon">🌍</div>
-                    <h3>International Trophies</h3>
-                    <p>Explore absolute global dominance, including the historic haul of UEFA Champions League and FIFA Club World Cup titles.</p>
+                <!-- Club World Cup -->
+                <div class="glass-card p-6 border border-white/10 rounded-xl flex items-center space-x-4">
+                    <div class="p-4 bg-yellow-500/10 text-yellow-400 rounded-lg border border-yellow-500/20"><i class="fa-solid fa-earth-americas text-2xl"></i></div>
+                    <div>
+                        <div class="text-2xl font-black text-white">5</div>
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">FIFA Club World Cups</div>
+                    </div>
                 </div>
-                <div><span class="btn-explore">View Trophies</span></div>
-            </a>
 
-            <!-- Redirects to Managers Page -->
-            <a href="managers.html" class="dash-card">
-                <div>
-                    <div class="card-icon">👔</div>
-                    <h3>Successful Managers</h3>
-                    <p>Review the masterminds behind the dynasties, from Miguel Muñoz to the modern tactical triumphs of Carlo Ancelotti.</p>
+                <!-- UEFA Super Cups -->
+                <div class="glass-card p-6 border border-white/10 rounded-xl flex items-center space-x-4">
+                    <div class="p-4 bg-purple-500/10 text-purple-400 rounded-lg border border-purple-500/20"><i class="fa-solid fa-award text-2xl"></i></div>
+                    <div>
+                        <div class="text-2xl font-black text-white">6</div>
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">UEFA Super Cups</div>
+                    </div>
                 </div>
-                <div><span class="btn-explore">View Managers</span></div>
-            </a>
-        
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Real Madrid Fan Portal. Built for Madridistas Worldwide.</p>
-    </footer>
+                <!-- Intercontinental Cups -->
+                <div class="glass-card p-6 border border-white/10 rounded-xl flex items-center space-x-4">
+                    <div class="p-4 bg-emerald-500/10 text-emerald-400 rounded-lg border border-emerald-500/20"><i class="fa-solid fa-globe text-2xl"></i></div>
+                    <div>
+                        <div class="text-2xl font-black text-white">3</div>
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Intercontinental Cups</div>
+                    </div>
+                </div>
 
-</body>
-</html>
+            </div>
+        </section>
+
+        <!-- Two Column Data Grid: Achievements & Managers -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <!-- Column 1: Historical Club Achievements -->
+            <section id="achievements" class="space-y-4">
+                <h2 class="text-xl font-bold tracking-wider text-white uppercase border-l-4 border-yellow-400 pl-3">Domestic & Historic Achievements</h2>
+                <div class="glass-card p-6 border border-white/10 rounded-xl space-y-4">
+                    
+                    <div class="flex justify-between items-center pb-3 border-b border-white/5">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                            <span class="text-sm font-medium text-slate-300">La Liga Titles</span>
+                        </div>
+                        <span class="text-sm font-bold text-white bg-white/10 px-2 py-0.5 rounded">36 Titles</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-white/5">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                            <span class="text-sm font-medium text-slate-300">Copa del Rey Trophies</span>
+                        </div>
+                        <span class="text-sm font-bold text-white bg-white/10 px-2 py-0.5 rounded">20 Titles</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-white/5">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                            <span class="text-sm font-medium text-slate-300">Supercopa de España</span>
+                        </div>
+                        <span class="text-sm font-bold text-white bg-white/10 px-2 py-0.5 rounded">13 Titles</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                            <span class="text-sm font-medium text-slate-300">FIFA Club of the Century</span>
+                        </div>
+                        <span class="text-xs font-bold text-yellow-400 bg-yellow-400/10 px-2.5 py-0.5 rounded-full uppercase tracking-wider">Laureate Award</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Column 2: Successful Managers Profile Dashboard -->
+            <section id="managers" class="space-y-4">
+                <h2 class="text-xl font-bold tracking-wider text-white uppercase border-l-4 border-yellow-400 pl-3">Elite Successful Managers</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    
+                    <!-- Manager 1 -->
+                    <div class="glass-card p-4 border border-white/10 rounded-xl space-y-2">
+                        <div class="text-xs font-bold text-yellow-400 uppercase tracking-wide">Most UCL Wins</div>
+                        <div class="text-base font-bold text-white">Carlo Ancelotti</div>
+                        <p class="text-xs text-slate-400 leading-normal">Masterminded historic tactical setups across multiple stints securing absolute Continental command.</p>
+                    </div>
+
+                    <!-- Manager 2 -->
+                    <div class="glass-card p-4 border border-white/10 rounded-xl space-y-2">
+                        <div class="text-xs font-bold text-blue-400 uppercase tracking-wide">3 In-A-Row European Cups</div>
+                        <div class="text-base font-bold text-white">Zinedine Zidane</div>
+                        <p class="text-xs text-slate-400 leading-normal">Dominated Europe dynamically by securing three consecutive UEFA Champions League trophies.</p>
+                    </div>
+
+                    <!-- Manager 3 -->
+                    <div class="glass-card p-4 border border-white/10 rounded-xl space-y-2">
 
